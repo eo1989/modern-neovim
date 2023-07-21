@@ -25,9 +25,8 @@ def get_prompt(nvim: Nvim, args):
         prompt = "\n".join(map(str, prompt))
         nvim.funcs.setpos("'<", (0, 0, 0, 0))
         nvim.funcs.setpos("'>", (0, 0, 0, 0))
-    else:
-        if len(args) > 0:
-            prompt = " ".join(args)
+    elif len(args) > 0:
+        prompt = " ".join(args)
     return prompt
 
 
